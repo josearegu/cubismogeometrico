@@ -1,0 +1,207 @@
+/* Estilo general del contenedor */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Fila principal con los cuatro cuadros */
+.main-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Fila secundaria con dos cuadros */
+.secondary-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Ajustar proporciones de los cuadros en la fila secundaria */
+.challenge-area {
+    flex: 10; /* 40% del espacio disponible */
+}
+
+.shop-available {
+    flex: 2; /* 60% del espacio disponible */
+}
+
+/* Estilo para las instrucciones */
+.instructions {
+    width: 200px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.instructions h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.instructions ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.instructions li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.instructions strong {
+    color: #333;
+}
+
+/* Área de dibujo (cuadrícula) */
+.drawing-area {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.color-picker {
+    margin-top: 10px;
+}
+
+/* Controles fijos (botones) */
+.controls {
+    width: 200px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.controls h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.controls button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Controles de la tienda (botones dinámicos) */
+.shop-controls {
+    width: 200px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.shop-controls h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.shop-controls button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Cuadro de desafío */
+.challenge-area {
+    width: 400px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-grow: 1;
+}
+
+.challenge-area h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.challenge-area input, .challenge-area button {
+    margin: 5px 0;
+    padding: 5px;
+}
+
+/* Cuadro de compras disponibles */
+.shop-available {
+    width: 400px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.shop-available h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.shop-available .shop {
+    margin-top: 10px;
+}
+
+.shop-available .shop h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Ajuste para dos columnas en #availableItems */
+.shop-available .shop #availableItems {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre botones */
+}
+
+.shop-available .shop button {
+    width: calc(50% - 5px); /* 50% del ancho menos la mitad del gap */
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    box-sizing: border-box; /* Incluye padding y bordes en el ancho */
+}
+
+/* Responsive: apilar en pantallas pequeñas */
+@media (max-width: 1200px) {
+    .main-row, .secondary-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .instructions, .drawing-area, .controls, .shop-controls, 
+    .challenge-area, .shop-available {
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 20px;
+    }
+    /* Volver a una columna en pantallas pequeñas */
+    .shop-available .shop button {
+        width: 100%;
+    }
+}
+
+.selected-button {
+    border: 2px solid #aada00; /* Borde amarillo */
+    color: #fa0000; /* Texto amarillo */
+}
+#challengeText {
+    font-size: 23px;
+    text-align: center;
+}
+
+.image-area {
+    margin-right: 20px; /* Espacio entre la imagen y el área de desafíos */
+}

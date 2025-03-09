@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArteMatemático: Crea y Calcula</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>"¡Cubismo Mágico: Crea Tu Mundo Geométrico!"</h1>
+        <h3>"DOCENTE JHEINI MAUXI BOHORQUEZ DELGADO</h3>
+        <div class="main-row">
+            
+            <div class="instructions">
+                <div class="image-area">
+                    <img src="escudo.png" alt="Descripción de la imagen" width="200">
+                </div>
+                <h2>Instrucciones</h2>
+                <ul>
+                    <li><strong>Clic izquierdo:</strong> Selecciona o dibuja.</li>
+                    <li><strong>Clic derecho:</strong> Deselecciona.</li>
+                    <li><strong>Arrastrar:</strong> Mueve figura seleccionada.</li>
+                    <li><strong>Girar:</strong> Usa botones de rotación.</li>
+                    <li><strong>Borrar:</strong> Selecciona y borra.</li>
+                    <li><strong>Color:</strong> Elige antes de dibujar.</li>
+                    <li><strong>Tienda:</strong> Gana monedas con los desafíos Matématicos.</li>
+                    <li><strong>Reset:</strong> Borra todo el lienzo.</li>
+                </ul>
+            </div>
+            
+            <div class="drawing-area">
+                <canvas id="canvas" width="500" height="500"></canvas>
+                <div class="color-picker">
+                    <label for="colorPicker">Color:</label>
+                    <input type="color" id="colorPicker" value="#000000">
+                </div>
+            </div>
+            <div class="controls">
+                <h2>Herramientas</h2>
+                <button id="circleBtn">Círculo</button>
+                <button id="squareBtn">Cuadrado</button>
+                <button id="triangleBtn">Triángulo</button>
+                <button id="resetBtn">Reset</button>
+                <button id="deleteShapeBtn">Borrar figura seleccionada</button>
+                <button id="rotateLeftBtn">Girar Izquierda</button>
+                <button id="rotateRightBtn">Girar Derecha</button>
+            </div>
+            <div class="shop-controls">
+                <h2>Figuras Compradas</h2>
+                <!-- Botones de figuras compradas se añadirán dinámicamente aquí -->
+            </div>
+        </div>
+        <div class="secondary-row">
+            <div class="challenge-area">
+                <h2>Desafío Matemático - RESUELVE: </h2>
+                <p id="challengeText">Resuelve:</p>
+                <input type="number" id="challengeInput">
+                <button id="submitBtn">Enviar</button>
+                <p id="feedback"></p>
+            </div>
+            <div class="shop-available">
+                <h2>Compras Disponibles - Tienda de Arte</h2>
+                <p>Monedas: <span id="coins">0</span></p>
+                <div class="shop">
+                    <div id="availableItems">
+                        <!-- Aquí se mostrarán las figuras disponibles para comprar -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="challenges.js"></script>
+</body>
+</html>
